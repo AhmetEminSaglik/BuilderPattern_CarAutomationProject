@@ -5,11 +5,11 @@ import com.company.car.part.body.ceiling.Ceiling;
 public class UncoveredCeiling extends Ceiling   {
 
     public UncoveredCeiling() {
-
-        this.ceiling = "Uncovered Ceiling";
-
+        this.ceiling = "Uncovered";
     }
 
-
-
+    @Override
+    public Ceiling createCeiling() {
+        return this;
+    }
 }

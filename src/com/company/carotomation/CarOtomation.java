@@ -3,10 +3,7 @@ package com.company.carotomation;
 import com.company.interfaces.car.CarFactory;
 
 public class CarOtomation {
-    //    private BodyFactory bodyFactory;
-//    private BrandBuilder brandBuilder;
-//    private ModelBuilder modelBuilder;
-//
+
     CarFactory carFactory;
 
     public CarOtomation(CarFactory carFactory) {

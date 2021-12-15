@@ -1,6 +1,8 @@
 package com.company.car.part.body.ceiling;
 
-public abstract class Ceiling {
+import com.company.interfaces.body.ceiling.CeilingBuilder;
+
+public abstract class Ceiling implements CeilingBuilder {
     protected String ceiling;
 
     @Override

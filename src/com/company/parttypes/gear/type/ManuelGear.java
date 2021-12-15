@@ -4,7 +4,7 @@ import com.company.car.part.body.gear.Gear;
 
 public abstract class ManuelGear extends Gear {
     public ManuelGear() {
-        this.model = "Manuel";
+        this.model = "Manuel, ";
 
     }
 }

@@ -1,6 +1,5 @@
 package com.company.main;
 
-import com.company.carotomation.CarOtomation;
 import com.company.interfaces.car.CarFactory;
 
 import java.lang.reflect.Constructor;
@@ -18,7 +17,7 @@ public class CarSelection {
             return carOtomation;
         } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
-            System.exit(0);
+
         }
 
         return null;

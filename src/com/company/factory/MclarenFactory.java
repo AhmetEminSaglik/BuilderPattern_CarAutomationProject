@@ -7,11 +7,12 @@ import com.company.parttypes.brand.Brand_Mclaren;
 import com.company.parttypes.ceiling.MoveAbleCeiling;
 import com.company.parttypes.gear.Gear_Hatvemak;
 import com.company.parttypes.model.Model_McLaren765LT;
-import com.company.parttypes.seat.Seat_Aundetechnical;
+import com.company.parttypes.seat.Seat_OtomAlfaRomeo;
 
 public class MclarenFactory implements CarFactory {
-    private Car car = new Car();
-    private Body body = new Body();
+    private final Car car = new Car();
+    private final Body body = new Body();
+    private final PartSupplyFactory partSupplyFactory = new PartSupplyFactory(new Gear_Hatvemak(), new Seat_OtomAlfaRomeo(), new MoveAbleCeiling());
 
     @Override
     public Car getCar() {
@@ -25,35 +26,29 @@ public class MclarenFactory implements CarFactory {
 
     @Override
     public void addSeatToBody() {
-        body.setSeat(new Seat_Aundetechnical());
+        body.setSeat(partSupplyFactory.createSeat());
     }
 
     @Override
-    public void addGearToBody() {
-        body.setGear(new Gear_Hatvemak());
-
-    }
+    public void addGearToBody() {body.setGear(partSupplyFactory.createGear());}
 
     @Override
     public void addCeilingToBody() {
-        body.setCeiling(new MoveAbleCeiling());
+        body.setCeiling(partSupplyFactory.createCeiling());
     }
 
     @Override
     public void addBodyToCar() {
         car.setBody(body);
-
     }
 
     @Override
     public void createBrand() {
         car.setBrand(new Brand_Mclaren());
-
     }
 
     @Override
     public void createModel() {
         car.setModel(new Model_McLaren765LT());
-
     }
 }

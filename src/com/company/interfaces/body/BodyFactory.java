@@ -8,10 +8,5 @@ public interface BodyFactory {
     void addCeilingToBody();
 
     void addBodyToCar();
-    /*SeatBuilder addSeatToBody();
-
-    GearBuilder addGearToBody();
-
-    CeilingBuilder addCeilingToBody();*/
 
 }

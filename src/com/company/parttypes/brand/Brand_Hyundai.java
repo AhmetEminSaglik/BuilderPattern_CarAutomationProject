@@ -8,8 +8,4 @@ public class Brand_Hyundai extends Brand /*implements BrandBuilder*/ {
         this.brand = "HYUNDAI";
     }
 
- /*   @Override
-    public void createBrand() {
-
-    }*/
 }

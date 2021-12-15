@@ -10,8 +10,9 @@ import com.company.parttypes.model.Model_Fiat500XSport;
 import com.company.parttypes.seat.Seat_Aundetechnical;
 
 public class FiatFactory implements CarFactory {
-    private Car car = new Car();
-    private Body body = new Body();
+    private final Car car = new Car();
+    private final Body body = new Body();
+    private final PartSupplyFactory partSupplyFactory = new PartSupplyFactory(new Gear_Faster(), new Seat_Aundetechnical(), new CoveredCeiling());
 
     @Override
     public Car getCar() {
@@ -21,7 +22,6 @@ public class FiatFactory implements CarFactory {
     @Override
     public void printAllCarInfo() {
         System.out.println(car.toString());
-
     }
 
     @Override
@@ -43,13 +43,11 @@ public class FiatFactory implements CarFactory {
     @Override
     public void addBodyToCar() {
         car.setBody(body);
-
     }
 
     @Override
     public void createBrand() {
         car.setBrand(new Brand_Fiat());
-
     }
 
     @Override

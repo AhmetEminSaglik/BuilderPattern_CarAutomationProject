@@ -8,7 +8,7 @@ public abstract class Gear {
     public String toString() {
         return "Gear    {" +
                 " " + model +
-                " (number): " + number +
+                ", (number): " + number +
                 " }";
     }
 }
